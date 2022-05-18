@@ -1,54 +1,55 @@
-function plusMinusRatios(arr) {
-    let positiveNumsCount = 0;
-    let negativeNumsCount = 0;
-    let zerosCount = 0;
+function plusNegative(input) {
+    let arrayLength = input.shift();
+    let arr = input.shift();
+
+    let positiveNumbers = 0;
+    let negativeNumbers = 0;
+    let zeroNumbers = 0;
 
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i] > 0) {
-            positiveNumsCount++;
-        } else if (arr[i] < 0) {
-            negativeNumsCount++;
-        } else {
-            zerosCount++;
-        }
+        if (arr[i] > 0) positiveNumbers++;
+        else if (arr[i] < 0) negativeNumbers++;
+        else zeroNumbers++;
     }
 
-    let positiveRatio = positiveNumsCount / arr.length;
-    let negativeRatio = negativeNumsCount / arr.length;
-    let zeroRatio = zerosCount / arr.length;
-
-    console.log(positiveRatio.toFixed(6));
-    console.log(negativeRatio.toFixed(6));
-    console.log(zeroRatio.toFixed(6));
-}
-
-plusMinusRatios([-4, 3, -9, 0, 4, 1])
-
-
-function plusMinus(input) {
-    let arrayLength = input[0];
-    let arr = input[1];
-
-    let positiveNumsCount = 0;
-    let negativeNumsCount = 0;
-    let zerosCount = 0;
-
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] > 0) {
-            positiveNumsCount++;
-        } else if (arr[i] < 0) {
-            negativeNumsCount++;
-        } else {
-            zerosCount++;
-        }
+    function calcRatio(countNumbers, quantity) {
+        return (countNumbers / quantity).toFixed(4);
     }
 
-    console.log(positiveNumsCount)
-    console.log(negativeNumsCount)
-    console.log(zerosCount)
+    let positiveNumsRatio = calcRatio(positiveNumbers, arrayLength)
+    let negativeNumsRatio = calcRatio(negativeNumbers, arrayLength)
+    let zeroNumbersRatio = calcRatio(zeroNumbers, arrayLength)
+
+    return `${positiveNumsRatio}\n${negativeNumsRatio}\n${zeroNumbersRatio}`;
 }
 
-plusMinus(6, [-4, 3, -9, 0, 4, 1])
+console.log(plusNegative([5, [1, 2, -1, -2, -4, 0]]));
+
+console.log("Second solution")
 
 
+function plusMinus(arr) {
+    let arrLength = arr.shift();
+    let arrayNums = arr.shift();
 
+    let positiveNumbers = 0;
+    let negativeNumbers = 0;
+    let zeroNumbers = 0;
+
+    for (let i = 0; i < arrayNums.length; i++) {
+        if (arrayNums[i] > 0) positiveNumbers++;
+        else if (arrayNums[i] < 0) negativeNumbers++;
+        else zeroNumbers++;
+    }
+
+    let positiveNumsRatio = calcRatio(positiveNumbers, arrLength);
+    let negativeNumsRatio = calcRatio(negativeNumbers, arrLength);
+    let zeroNumbersRatio = calcRatio(zeroNumbers, arrLength);
+
+    return `${positiveNumsRatio}\n${negativeNumsRatio}\n${zeroNumbersRatio}`;
+}
+
+function calcRatio(countNumbers, quantity) {
+    return (countNumbers / quantity).toFixed(4);
+}
+console.log(plusMinus([8, [1, 2, 3, -1, -2, -3, 0, 0]]))
