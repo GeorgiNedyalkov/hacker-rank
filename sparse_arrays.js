@@ -11,7 +11,6 @@ function matchingStrings(strings, queries) {
         counterQueries.push(current);
     }
 
-
     for (let i = 0; i < strings.length; i++) {
         for (let j = 0; j < queries.length; j++) {
             
