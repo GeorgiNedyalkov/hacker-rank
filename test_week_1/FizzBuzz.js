@@ -12,14 +12,4 @@ function fizzBuzz(n) {
   }
 }
 
-// fizzBuzz(15);
-
-function findMedian(arr) {
-  const mid = Math.floor(arr.length / 2);
-  arr.sort();
-
-  console.log(mid);
-  console.log(arr);
-}
-
-findMedian([0, 1, 2, 4, 6, 5, 3]);
+fizzBuzz(15);
