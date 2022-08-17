@@ -4,6 +4,7 @@ function marsExploration(s) {
   let numberOfMessages = s.length / 3;
   let messageArr = s.split("");
 
+  // separate messages from the input string
   while (numberOfMessages > 0) {
     messages.push(messageArr.splice(0, 3));
     numberOfMessages--;
