@@ -62,3 +62,11 @@ Expected Signal: SOSSOS
 Received Signal: SOSSOT
 
 We print the number of changed letters, which is 1.
+
+3. Flipping Bits
+
+Input: 32 bit unsigner integer.
+
+Give a number with 1 and 0's. Flip 1 to 0 and vice versa.
+
+Output: int: unsigned decimal integer
