@@ -82,3 +82,7 @@ Given a square matrix calculate the absolute difference between its diagonals.
 The left-to-right diagonal = 1 + 5 + 9 = 15. The right to left diagonal = 3 + 5 + 9 = 17. Their absolute difference is |15 - 17| = 2.
 
 return the absolute difference.
+
+5. Counting Sort
+
+Quicksort usually has a running time of , but is there an algorithm that can sort even faster? In general, this is not possible. Most sorting algorithms are comparison sorts, i.e. they sort a list just by comparing the elements to one another. A comparison sort algorithm cannot beat (worst-case) running time, since represents the minimum number of comparisons needed to know where to place each element.

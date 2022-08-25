@@ -1,17 +1,20 @@
 function gradingStudents(grades) {
-  let result = [];
-  let diff = 0;
+  let roundedGrades = [];
 
   for (let grade of grades) {
-    const diff = 5 - (grade % 5);
-
-    if (grade >= 38 && diff < 3) {
-      result.push(grade + diff);
+    if (grade < 38) {
+      roundedGrades.push(grade);
     } else {
-      result.push(grade);
+      let difference = 5 - (grade % 5);
+
+      if (difference < 3) {
+        roundedGrades.push(grade + difference);
+      } else {
+        roundedGrades.push(grade);
+      }
     }
   }
-  return;
-}
 
-gradingStudents([73, 67, 38, 33]);
+  return roundedGrades;
+}
+console.log(gradingStudents([73, 67, 38, 33]));
