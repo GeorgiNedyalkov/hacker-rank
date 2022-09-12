@@ -46,6 +46,7 @@ function processData(input) {
     if (dataType == "M") {
       let firstLetter = result[0].toLowerCase()
       let remainingLetters = result.substring(1, result.length)
+
       return firstLetter + remainingLetters + "()"
     } else if (dataType == "C") {
       return result
